@@ -20,7 +20,7 @@ export class CategoryService {
   deleteCategory(id: any): Observable<ICategory> {
     return this.http.delete<ICategory>(`http://localhost:8080/api/category/${id}`)
   }
-  updateCategory(category: ICategory): Observable<{}> {
-    return this.http.patch<{}>(`http://localhost:8080/api/category/${product.id}`, category)
+  updateCategory(category: ICategory): Observable<ICategory> {
+    return this.http.patch<ICategory>(`http://localhost:8080/api/category/${product.id}`, category)
   }
 }
