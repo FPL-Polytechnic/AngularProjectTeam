@@ -1,0 +1,42 @@
+h2{
+  text-align: center;
+  color: orangered;
+  font-weight: 600;
+}
+.registration-form {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: #edf3f8;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form label {
+  font-weight: bold;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.already-member {
+text-align: center;
+font-size: 17px;
+}
+.already-member a {
+  margin-left: 10px ;
+  text-decoration: none;
+}
+
