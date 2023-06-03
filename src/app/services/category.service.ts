@@ -21,6 +21,6 @@ export class CategoryService {
     return this.http.delete<ICategory>(`http://localhost:8080/api/category/${id}`)
   }
   updateCategory(category: ICategory): Observable<ICategory> {
-    return this.http.patch<ICategory>(`http://localhost:8080/api/category/${product.id}`, category)
+    return this.http.patch<ICategory>(`http://localhost:8080/api/category/${category.id}`, category)
   }
 }
