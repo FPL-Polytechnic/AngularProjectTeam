@@ -5,5 +5,5 @@ export interface IProduct {
   description: string;
   image: string;
   color: string;
-  categoryId: number | string;
+  categoryId: number | string | undefined;
 }

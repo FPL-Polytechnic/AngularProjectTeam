@@ -4,7 +4,7 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { ProductService } from 'src/app/services/product.service';
 import { ICategory } from 'src/app/interfaces/category';
 import { CategoryService } from 'src/app/services/category.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-add',
@@ -31,7 +31,6 @@ export class ProductAddComponent {
     this.categoryService.getCategories().subscribe((data) => {
       this.categories = data.data;
     });
-    // console.log(this.categories);
   }
 
   onHandleAdd() {
