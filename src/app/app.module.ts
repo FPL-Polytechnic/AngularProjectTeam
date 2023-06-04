@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { LayoutWebsiteComponent } from './layouts/layout-website/layout-website.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { RegisterUserComponent } from './auth/register-user/register-user.component';
@@ -13,7 +12,9 @@ import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.compon
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { ProductListAdminComponent } from './pages/admin/product-list-admin/product-list-admin.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
-
+import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
+import { FormsModule } from '@angular/forms';
+import { LayoutWebsiteComponent } from './layouts/layout-website/layout-website.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +28,15 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
     DashboardComponent,
     ProductListAdminComponent,
     ProductDetailComponent,
+    ProductAddComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+      ReactiveFormsModule,
+      AppRoutingModule,
+      HttpClientModule,
+      FormsModule,
+  ],
 
   providers: [],
   bootstrap: [AppComponent],
