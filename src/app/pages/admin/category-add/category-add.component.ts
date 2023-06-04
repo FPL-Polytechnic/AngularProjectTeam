@@ -26,7 +26,7 @@ export class CategoryAddComponent {
       };
       this.productService.addCategory(product).subscribe((category) => {
         alert('Thêm danh mục thành công ✅');
-        this.router.navigateByUrl('/admin/products');
+        this.router.navigateByUrl('/login');
       });
     }
   }
