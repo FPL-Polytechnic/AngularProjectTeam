@@ -1,34 +1,50 @@
-<form class="container mt-4 registration-form" [formGroup]="formSignup" (ngSubmit)="onHandleSubmit()">
+<form
+  class="container mt-4 registration-form"
+  [formGroup]="formSignup"
+  (ngSubmit)="onHandleSubmit()"
+>
   <h2>Register User 🔑</h2>
-  <div class="form-group" >
+  <div class="form-group">
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required class="form-control" formControlName="name" />
-    <div style="color: red;"
-        *ngIf="
-            formSignup.get('name')?.hasError('required') &&
-            (formSignup.get('name')?.touched ||
-                formSignup.get('name')?.dirty)
-        "
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
+      class="form-control"
+      formControlName="name"
+    />
+    <div
+      style="color: red"
+      *ngIf="
+        formSignup.get('name')?.hasError('required') &&
+        (formSignup.get('name')?.touched || formSignup.get('name')?.dirty)
+      "
     >
-        Name is Required 
+      Name is Required
     </div>
-    <div style="color: red;"
-        *ngIf="formSignup.get('name')?.hasError('pattern')"
-    >
-        Name không được dùng ký tự đặng biệt
+    <div style="color: red" *ngIf="formSignup.get('name')?.hasError('pattern')">
+      Name không được dùng ký tự đặc biệt
     </div>
   </div>
   <div class="form-group">
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required class="form-control" formControlName="email" />
-    <div style="color: red;"
-        *ngIf="
-            formSignup.get('email')?.hasError('required') &&
-            (formSignup.get('email')?.touched ||
-                formSignup.get('email')?.dirty)
-        "
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      class="form-control"
+      formControlName="email"
+    />
+    <div
+      style="color: red"
+      *ngIf="
+        formSignup.get('email')?.hasError('required') &&
+        (formSignup.get('email')?.touched || formSignup.get('email')?.dirty)
+      "
     >
-        email is Required
+      email is Required
     </div>
   </div>
 
@@ -43,15 +59,15 @@
       formControlName="password"
     />
   </div>
-  <div style="color: red;"
-  *ngIf="
+  <div
+    style="color: red"
+    *ngIf="
       formSignup.get('password')?.hasError('required') &&
-      (formSignup.get('password')?.touched ||
-          formSignup.get('password')?.dirty)
-  "
->
-  Password is required
-</div>
+      (formSignup.get('password')?.touched || formSignup.get('password')?.dirty)
+    "
+  >
+    Password is required
+  </div>
   <div class="form-group">
     <label for="confirmPassword">Confirm Password:</label>
     <input
@@ -63,18 +79,19 @@
       formControlName="confirmPassword"
     />
   </div>
-  <div style="color: red;"
-  *ngIf="
+  <div
+    style="color: red"
+    *ngIf="
       formSignup?.hasError('notMatch') &&
       (formSignup.get('confirmPassword')?.touched ||
-          formSignup.get('confirmPassword')?.dirty)
-  "
->
-  Mật khẩu không trùng khớp
-</div>
+        formSignup.get('confirmPassword')?.dirty)
+    "
+  >
+    Mật khẩu không trùng khớp
+  </div>
   <button type="submit" class="btn btn-primary">Register now</button>
   <div class="already-member">
     <span>Already a member?</span>
-    <a href="">Login</a>
+    <a routerLink="/login">Login</a>
   </div>
 </form>
