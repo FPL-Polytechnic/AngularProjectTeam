@@ -23,7 +23,7 @@ export class CategoryAddComponent {
         name: this.productForm.value.name || ""
       }
       this.productService.addCategory(product).subscribe(category => {
-        console.log('Thành công', category)
+       alert('thêm thành công')
       })
     }
 
