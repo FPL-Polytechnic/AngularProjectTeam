@@ -7,9 +7,10 @@ import { RegisterUserComponent } from './auth/register-user/register-user.compon
 import { LoginUserComponent } from './auth/login-user/login-user.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
-
 import { ProductListAdminComponent } from './pages/admin/product-list-admin/product-list-admin.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { CategoryAddComponent } from './pages/admin/category-add/category-add.component';
+
 
 const routes: Routes = [
   {
@@ -29,7 +30,8 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'products', component: ProductListAdminComponent },
+      {path:'products',component:ProductListAdminComponent},
+      {path:'category/add',component:CategoryAddComponent}
     ],
   },
 ];
