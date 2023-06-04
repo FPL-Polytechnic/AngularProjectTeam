@@ -9,6 +9,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { RegisterUserComponent } from './auth/register-user/register-user.component';
 import { LoginUserComponent } from './auth/login-user/login-user.component';
+import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
+import { DashboardComponent } from './pages/home-page/admin/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { LoginUserComponent } from './auth/login-user/login-user.component';
     LayoutWebsiteComponent,
     HomePageComponent,
      RegisterUserComponent,
-    LoginUserComponent
+    LoginUserComponent,
+    LayoutAdminComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
