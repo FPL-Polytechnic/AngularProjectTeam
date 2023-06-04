@@ -12,6 +12,7 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
 import { CategoryAddComponent } from './pages/admin/category-add/category-add.component';
+import { CategoryListComponent } from './pages/admin/category-list/category-list.component';
 
 
 const routes: Routes = [
@@ -34,7 +35,8 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       {path:'products',component:ProductListAdminComponent},
       {path:'products/add',component:ProductAddComponent},
-      {path:'category/add',component:CategoryAddComponent}
+      {path:'category/add',component:CategoryAddComponent},
+      {path:'category',component:CategoryListComponent}
     ],
   },
 ];
