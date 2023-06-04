@@ -1,0 +1,32 @@
+<div class="container pt-5">
+    <h3 class="pb-2">Danh sách sản phẩm</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên sản phẩm </th>
+                <th>Hình ảnh sản phẩm</th>
+                <th>Giá sản phẩm</th>
+                <th>Mô tả sản phẩm</th>
+                <th>Màu sắc</th>
+                <th>Danh mục</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead> 
+        <tbody>
+            <tr *ngFor="let product of products,index as i">
+                <th>{{i+1}}</th>
+                <th>{{product.name}}</th>
+                <th><img class="img" [src]="product.image"/></th>
+                <th>{{product.price}}</th>
+                <th>{{product.description}}</th>
+                <th>{{product.color}}</th>
+                <th>{{categoryName(product.categoryId)}}</th>
+                <th>
+                    <button class="btn btn-danger" (click)="removeHandler(product._id)">Remove</button>
+                    <button class="btn btn-info ">Edit</button>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>
