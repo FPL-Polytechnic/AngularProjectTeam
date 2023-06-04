@@ -24,10 +24,9 @@ export class ProductListAdminComponent {
     });
   }
   removeHandler(id: any) {
-    if (confirm('Bạn có muốn xóa sản phẩm không ?'))
-      alert('Xóa sản phẩm thành công ✅');
-    {
+    if (confirm('Bạn có muốn xóa sản phẩm không ?')) {
       this.productService.deleteProduct(id).subscribe(() => {
+        alert('Xóa sản phẩm thành công ✅');
         this.products = this.products.filter((product) => product._id !== id);
       });
     }

@@ -1,3 +1,4 @@
+<h2>Thêm sản phẩm</h2>
 <form (ngSubmit)="onHandleAdd()" [formGroup]="productForm" >
     <div class="mp3">
         <label for="name">Tên sản phẩm:</label>
@@ -13,15 +14,15 @@
     </div>
         <div class="mp3" >
         <label for="image">Image:</label>
-        <input type="file" id="image" formControlName="image" class="form-control">
+        <input type="text" id="image" formControlName="image" class="form-control">
     </div>
         <div class="mp3">
-     
+
         <label for="color">Màu sắc:</label>
         <input type="text" id="color" formControlName="color" class="form-control">
     </div>
         <div class="mp3">
-    
+
         <label for="categoryId">Loại</label>
         <select class="form-control" formControlName="categoryId" id="categoryId">
             <option value="" disabled selected>Chọn danh mục</option>
@@ -29,6 +30,9 @@
         </select>
 
     </div>
+    <div class="btnsubmit">
         <button type="submit" [disabled]="!productForm.valid" class="btn btn-danger">Submit</button>
-        
+
+    </div>
+
 </form>
