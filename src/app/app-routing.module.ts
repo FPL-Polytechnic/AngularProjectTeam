@@ -7,12 +7,17 @@ import { RegisterUserComponent } from './auth/register-user/register-user.compon
 import { LoginUserComponent } from './auth/login-user/login-user.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { ProductsListComponent } from './components/products-list/products-list.component';
 
 const routes: Routes = [
   {
     path: '',
     component: LayoutWebsiteComponent,
-    children: [{ path: '', component: HomePageComponent }],
+    children: [
+      { path: '', component: HomePageComponent },
+      {path:'product/:id',component:ProductDetailComponent}
+    ],
   },
   { path: 'register', component: RegisterUserComponent },
   { path: 'login', component: LoginUserComponent },
