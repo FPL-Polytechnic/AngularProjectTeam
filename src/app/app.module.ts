@@ -10,8 +10,7 @@ import { ProductsListComponent } from './components/products-list/products-list.
 import { RegisterUserComponent } from './auth/register-user/register-user.component';
 import { LoginUserComponent } from './auth/login-user/login-user.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
-import { DashboardComponent } from './pages/home-page/admin/dashboard/dashboard.component';
-
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -19,16 +18,12 @@ import { DashboardComponent } from './pages/home-page/admin/dashboard/dashboard.
     ProductsListComponent,
     LayoutWebsiteComponent,
     HomePageComponent,
-     RegisterUserComponent,
+    RegisterUserComponent,
     LoginUserComponent,
     LayoutAdminComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
 
   providers: [],
   bootstrap: [AppComponent],
