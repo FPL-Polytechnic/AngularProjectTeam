@@ -6,7 +6,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { RegisterUserComponent } from './auth/register-user/register-user.component';
 import { LoginUserComponent } from './auth/login-user/login-user.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
-import { DashboardComponent } from './pages/home-page/admin/dashboard/dashboard.component';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
