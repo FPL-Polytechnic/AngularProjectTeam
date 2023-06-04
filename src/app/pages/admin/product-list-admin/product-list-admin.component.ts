@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IProduct } from 'src/app/interfaces/product';
 import { ProductService } from 'src/app/services/product.service';
-import { Route } from '@angular/router';
 import { CategoryService } from 'src/app/services/category.service';
 import { ICategory } from 'src/app/interfaces/category';
 @Component({

@@ -1,5 +1,5 @@
-<h2>Thêm sản phẩm</h2>
-<form (ngSubmit)="onHandleAdd()" [formGroup]="productForm">
+<h2>Sửa sản phẩm</h2>
+<form [formGroup]="productForm" (ngSubmit)="onHandleUpdate()">
   <div class="mp3">
     <label for="name">Tên sản phẩm:</label>
     <input type="text" id="name" formControlName="name" class="form-control" />
@@ -44,8 +44,8 @@
     <label for="categoryId">Loại</label>
     <select class="form-control" formControlName="categoryId" id="categoryId">
       <option value="" disabled selected>Chọn danh mục</option>
-      <option *ngFor="let item of categories" [value]="item._id">
-        {{ item.name }}
+      <option *ngFor="let category of categories" [value]="category._id">
+        {{ category.name }}
       </option>
     </select>
   </div>

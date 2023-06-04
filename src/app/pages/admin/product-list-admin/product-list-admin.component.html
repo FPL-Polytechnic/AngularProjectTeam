@@ -1,4 +1,4 @@
-<div class="container pt-5" style="text-align:center;">
+<div class="container pt-5" style="text-align: center">
   <h2 class="pb-2">Danh sách sản phẩm</h2>
   <table class="table table-bordered">
     <thead>
@@ -14,21 +14,25 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let product of products; index as i">
-        <th>{{ i + 1 }}</th>
-        <th>{{ product.name }}</th>
-        <th><img class="img" [src]="product.image" /></th>
-        <th>{{ product.price }}</th>
-        <th>{{ product.description }}</th>
-        <th>{{ product.color }}</th>
-        <th>{{ categoryName(product.categoryId) }}</th>
-        <th>
-           <button class="btn btn-primary" style="margin-right: 3px;">Edit</button>
+      <tr *ngFor="let product of products; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ product.name }}</td>
+        <td><img class="img" [src]="product.image" /></td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.color }}</td>
+        <td>{{ categoryName(product.categoryId) }}</td>
+        <td>
+          <a
+            class="btn btn-primary"
+            style="margin-right: 3px"
+            [routerLink]="[product._id, 'edit']"
+            >Edit</a
+          >
           <button class="btn btn-danger" (click)="removeHandler(product._id)">
             Remove
           </button>
-
-        </th>
+        </td>
       </tr>
     </tbody>
   </table>
