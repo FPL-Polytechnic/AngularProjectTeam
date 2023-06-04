@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['../../assets/css/main copy.css']
 })
 export class ProductDetailComponent {
+  
 
 }
