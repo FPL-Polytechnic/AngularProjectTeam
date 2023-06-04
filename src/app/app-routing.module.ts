@@ -9,6 +9,7 @@ import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.compon
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
+import { CategoryAddComponent } from './pages/admin/category-add/category-add.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
+      {path:'category/add',component:CategoryAddComponent}
     ],
   },
 ];
