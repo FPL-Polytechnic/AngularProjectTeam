@@ -1,0 +1,48 @@
+<!-- admin-layout.component.html -->
+<div class="container-fluid h-100 layout">
+  <div class="row h-100">
+    <div class="col-lg-3 sidebar">
+      <div class="logo">
+        <a><img src="https://ap.poly.edu.vn/images/logo.png" alt="" /></a>
+      </div>
+      <ul class="nav flex-column sidebar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="admin/dashboard">
+            <i class="bi bi-speedometer2"></i> Dashboard 🏠
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">
+            <i class="bi bi-box"></i>Add Product 📕
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">
+            <i class="bi bi-people"></i> Add Category 📖
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">
+            <i class="bi bi-people"></i>Manage Products 🎁
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">
+            <i class="bi bi-people"></i>Manage Categorys 🔐
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">
+            <i class="bi bi-people"></i>Manage Users 👤
+          </a>
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        FPT Polytechnic - Frontend Framework 1 - Angular Project Team
+      </div>
+    </div>
+    <div class="col-lg-9 content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
