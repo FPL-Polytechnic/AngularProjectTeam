@@ -7,11 +7,11 @@ import { RegisterUserComponent } from './auth/register-user/register-user.compon
 import { LoginUserComponent } from './auth/login-user/login-user.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
-
 import { ProductListAdminComponent } from './pages/admin/product-list-admin/product-list-admin.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
+import { CategoryAddComponent } from './pages/admin/category-add/category-add.component';
 
 
 const routes: Routes = [
@@ -20,7 +20,7 @@ const routes: Routes = [
     component: LayoutWebsiteComponent,
     children: [
       { path: '', component: HomePageComponent },
-      {path:'product/:id',component:ProductDetailComponent}
+      { path: 'product/:id', component: ProductDetailComponent },
     ],
   },
   { path: 'register', component: RegisterUserComponent },
@@ -33,7 +33,8 @@ const routes: Routes = [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
       {path:'products',component:ProductListAdminComponent},
-      {path:'products/add',component:ProductAddComponent}
+      {path:'products/add',component:ProductAddComponent},
+      {path:'category/add',component:CategoryAddComponent}
     ],
   },
 ];

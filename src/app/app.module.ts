@@ -15,6 +15,8 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
 import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
 import { FormsModule } from '@angular/forms';
 import { LayoutWebsiteComponent } from './layouts/layout-website/layout-website.component';
+import { CategoryAddComponent } from './pages/admin/category-add/category-add.component';
+
 
 @NgModule({
   declarations: [
@@ -28,15 +30,11 @@ import { LayoutWebsiteComponent } from './layouts/layout-website/layout-website.
     DashboardComponent,
     ProductListAdminComponent,
     ProductDetailComponent,
+    CategoryAddComponent,
     ProductAddComponent,
   ],
-  imports: [
-    BrowserModule,
-      ReactiveFormsModule,
-      AppRoutingModule,
-      HttpClientModule,
-      FormsModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule,FormsModule,
+    ReactiveFormsModule],
 
   providers: [],
   bootstrap: [AppComponent],
