@@ -7,8 +7,8 @@ import { ICategory } from '../interfaces/category';
 })
 export class CategoryService {
   constructor(private http: HttpClient) {}
-  getCategories(): Observable<{}> {
-    return this.http.get<{}>(`http://localhost:8080/api/category`);
+  getCategories(): Observable<any> {
+    return this.http.get<any>(`http://localhost:8080/api/category`);
   }
   getCategoriesById(id: any): Observable<{}> {
     return this.http.get<{}>(`http://localhost:8080/api/category/${id}`);
@@ -26,7 +26,7 @@ export class CategoryService {
   }
   updateCategory(category: ICategory): Observable<ICategory> {
     return this.http.patch<ICategory>(
-      `http://localhost:8080/api/category/${category.id}`,
+      `http://localhost:8080/api/category/${category._id}`,
       category
     );
   }

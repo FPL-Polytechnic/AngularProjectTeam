@@ -7,8 +7,8 @@ import { Observable } from "rxjs"
 export class ProductService {
 
   constructor(private http: HttpClient) { }
-  getProducts(): Observable<{}> {
-    return this.http.get<{}>(`http://localhost:8080/api/product`)
+  getProducts(): Observable<any> {
+    return this.http.get<any>(`http://localhost:8080/api/product`)
   }
   getProductsById(id: any): Observable<{}> {
     return this.http.get<{}>(`http://localhost:8080/api/product/${id}`)
@@ -20,6 +20,6 @@ export class ProductService {
     return this.http.delete<{}>(`http://localhost:8080/api/product/${id}`)
   }
   updateProduct(product:any):Observable<{}>{
-    return this.http.patch<{}>(`http://localhost:8080/api/product/${product.id}`,product)
+    return this.http.patch<{}>(`http://localhost:8080/api/product/${product._id}`,product)
  }
 }
