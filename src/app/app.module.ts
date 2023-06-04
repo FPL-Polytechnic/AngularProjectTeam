@@ -12,6 +12,8 @@ import { LoginUserComponent } from './auth/login-user/login-user.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { ProductListAdminComponent } from './pages/admin/product-list-admin/product-list-admin.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { ProductListAdminComponent } from './pages/admin/product-list-admin/prod
     LayoutAdminComponent,
     DashboardComponent,
     ProductListAdminComponent,
+    ProductDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
 
