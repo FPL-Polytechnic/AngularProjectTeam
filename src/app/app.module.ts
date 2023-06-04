@@ -11,6 +11,7 @@ import { RegisterUserComponent } from './auth/register-user/register-user.compon
 import { LoginUserComponent } from './auth/login-user/login-user.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
     LoginUserComponent,
     LayoutAdminComponent,
     DashboardComponent,
+    ProductDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
 
