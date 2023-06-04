@@ -10,8 +10,6 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 
 import { ProductListAdminComponent } from './pages/admin/product-list-admin/product-list-admin.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
-import { ProductsListComponent } from './components/products-list/products-list.component';
-
 
 const routes: Routes = [
   {
@@ -19,7 +17,7 @@ const routes: Routes = [
     component: LayoutWebsiteComponent,
     children: [
       { path: '', component: HomePageComponent },
-      {path:'product/:id',component:ProductDetailComponent}
+      { path: 'product/:id', component: ProductDetailComponent },
     ],
   },
   { path: 'register', component: RegisterUserComponent },
@@ -31,7 +29,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
-      {path:'products',component:ProductListAdminComponent}
+      { path: 'products', component: ProductListAdminComponent },
     ],
   },
 ];
