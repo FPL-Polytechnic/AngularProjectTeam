@@ -33,7 +33,8 @@ import { CategoryListComponent } from './pages/admin/category-list/category-list
     ProductDetailComponent,
     CategoryAddComponent,
     ProductAddComponent,
-    ProductUpdateComponent
+    ProductUpdateComponent,
+    CategoryListComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +42,6 @@ import { CategoryListComponent } from './pages/admin/category-list/category-list
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    CategoryListComponent,
   ],
 
   providers: [],
