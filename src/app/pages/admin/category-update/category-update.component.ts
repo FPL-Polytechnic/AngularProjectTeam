@@ -19,16 +19,16 @@ export class CategoryUpdateComponent {
     private categoryService: CategoryService,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private router :Router
+    private router: Router
   ) {
     this.route.paramMap.subscribe((param) => {
       const id = param.get('id');
       this.categoryService.getCategoriesById(id).subscribe(
         (product) => {
-          this.category=product.category
-        
-           this.productForm.patchValue({
-          name:this.category.name            
+          this.category = product.category;
+
+          this.productForm.patchValue({
+            name: this.category.name,
           });
         },
         (error) => console.log(error.message)
@@ -36,18 +36,17 @@ export class CategoryUpdateComponent {
     });
   }
 
-  
   onHandleSubmit() {
     if (this.productForm.valid) {
-      console.log(this.category);
-      
+      // console.log(this.category);
+
       const newProduct: ICategory = {
-        _id:this.category._id || "",
+        _id: this.category._id || '',
         name: this.productForm.value.name || '',
       };
       this.categoryService.updateCategory(newProduct).subscribe((product) => {
-        console.log("them san pham thanh cong",product);
-        this.router.navigateByUrl('/admin/category')
+        alert('Cập nhật danh mục thành công ✅');
+        this.router.navigateByUrl('/admin/category');
       });
     }
   }
