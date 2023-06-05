@@ -1,0 +1,12 @@
+<h2 class="pb-2" >Sửa danh mục</h2>
+<form (ngSubmit)="onHandleSubmit()" [formGroup]="productForm">
+  <input
+    type="text"
+    formControlName="name"
+    class="form-control"
+    placeholder="Tên danh mục"
+  />
+  <button type="submit" [disabled]="!productForm.valid" class="btn btn-danger">
+    Submit
+  </button>
+</form>
