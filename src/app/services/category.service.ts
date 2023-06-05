@@ -10,8 +10,8 @@ export class CategoryService {
   getCategories(): Observable<any> {
     return this.http.get<any>(`http://localhost:8080/api/category`);
   }
-  getCategoriesById(id: any): Observable<{}> {
-    return this.http.get<{}>(`http://localhost:8080/api/category/${id}`);
+  getCategoriesById(id: any): Observable<any> {
+    return this.http.get<any>(`http://localhost:8080/api/category/${id}`);
   }
   addCategory(category: ICategory): Observable<ICategory> {
     return this.http.post<ICategory>(

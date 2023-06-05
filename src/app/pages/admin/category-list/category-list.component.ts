@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ICategory } from 'src/app/interfaces/category';
+import { Route } from '@angular/router';
 import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { CategoryService } from 'src/app/services/category.service';
 })
 export class CategoryListComponent {
   categories: ICategory[] = [];
-  constructor(private categoryService: CategoryService) {
+  constructor(private categoryService: CategoryService    ) {
     this.categoryService.getCategories().subscribe((data) => {
       this.categories = data.data;
     });

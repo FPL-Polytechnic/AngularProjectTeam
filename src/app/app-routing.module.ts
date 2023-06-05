@@ -12,6 +12,8 @@ import { ProductAddComponent } from './pages/admin/product-add/product-add.compo
 import { CategoryAddComponent } from './pages/admin/category-add/category-add.component';
 import { ProductUpdateComponent } from './pages/admin/product-update/product-update.component';
 import { CategoryListComponent } from './pages/admin/category-list/category-list.component';
+import { CategoryUpdateComponent } from './pages/admin/category-update/category-update.component';
+
 
 const routes: Routes = [
   {
@@ -36,6 +38,7 @@ const routes: Routes = [
       { path: 'products/:id/edit', component: ProductUpdateComponent },
       { path: 'category', component: CategoryListComponent },
       { path: 'category/add', component: CategoryAddComponent },
+      {path: 'category/:id/edit',component:CategoryUpdateComponent}
     ],
   },
 ];

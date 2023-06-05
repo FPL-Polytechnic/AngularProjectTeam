@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,8 @@ import { LayoutWebsiteComponent } from './layouts/layout-website/layout-website.
 import { CategoryAddComponent } from './pages/admin/category-add/category-add.component';
 import { ProductUpdateComponent} from './pages/admin/product-update/product-update.component';
 import { CategoryListComponent } from './pages/admin/category-list/category-list.component';
+import { CategoryUpdateComponent } from './pages/admin/category-update/category-update.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { CategoryListComponent } from './pages/admin/category-list/category-list
     CategoryAddComponent,
     ProductAddComponent,
     ProductUpdateComponent,
-    CategoryListComponent,
+CategoryAddComponent,
+CategoryUpdateComponent,
+CategoryListComponent
+
   ],
   imports: [
     BrowserModule,
@@ -42,6 +48,8 @@ import { CategoryListComponent } from './pages/admin/category-list/category-list
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule
+    
   ],
 
   providers: [],
