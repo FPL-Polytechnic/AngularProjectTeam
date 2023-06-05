@@ -24,4 +24,9 @@ export class ProductService {
       product
     );
   }
+  searchProducts(search: string): Observable<any> {
+    return this.http.get<any>(
+      `http://localhost:8080/api/product/search?keyword=${search}`
+    );
+  }
 }

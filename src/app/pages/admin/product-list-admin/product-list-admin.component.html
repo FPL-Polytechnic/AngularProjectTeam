@@ -1,5 +1,29 @@
-<div class="container pt-5" style="text-align: center">
-  <h2 class="pb-2">Danh sách sản phẩm</h2>
+<div class="container pt-5">
+  <h2>Danh sách sản phẩm</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group mb-3">
+        <!-- //directive  -->
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="searchKeyword"
+          (ngModelChange)="onSearchKeywordChange()"
+          placeholder="Tìm kiếm theo tên sản phẩm"
+        />
+        <div class="input-group-append" style="margin-left: 5px">
+          <button
+            class="btn btn-primary"
+            type="button"
+            (click)="searchProducts()"
+          >
+            Tìm kiếm
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -14,7 +38,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let product of products; let i = index">
+      <tr *ngFor="let product of filteredProducts; let i = index">
         <td>{{ i + 1 }}</td>
         <td>{{ product.name }}</td>
         <td><img class="img" [src]="product.image" /></td>
