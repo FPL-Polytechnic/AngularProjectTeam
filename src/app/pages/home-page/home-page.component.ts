@@ -27,6 +27,7 @@ export class HomePageComponent {
     const category = this.categories.find((item) => item._id === id);
     return category?.name;
   }
+  
 
 
 }
