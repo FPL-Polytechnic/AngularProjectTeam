@@ -15,6 +15,7 @@ import { ProductListAdminComponent } from './pages/admin/product-list-admin/prod
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
 import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { LayoutWebsiteComponent } from './layouts/layout-website/layout-website.component';
 import { CategoryAddComponent } from './pages/admin/category-add/category-add.component';
 import { ProductUpdateComponent} from './pages/admin/product-update/product-update.component';
@@ -48,8 +49,8 @@ CategoryListComponent
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
-    
+    RouterModule,
+    NgxPaginationModule
   ],
 
   providers: [],
