@@ -1,16 +1,7 @@
-<div class="container pt-4" style="text-align: center;">
+<div class="container pt-4" style="text-align: center">
   <h2>Danh sách sản phẩm</h2>
   <div class="row justify-content-center">
-    <div class="col-md-6">
-      Filter by category
-      <select (change)='changeHandler($event)'>
-        <option value="0">All</option>
-        <option *ngFor="let item of categories" [value]="item._id">
-          {{ item.name }}
-        </option>
-      </select>
-    </div>
-    <div class="col-md-6">
+    <div class="col-md-8">
       <div class="input-group mb-3">
         <!-- //directive  -->
         <input
@@ -31,6 +22,15 @@
         </div>
       </div>
     </div>
+    <div class="col-md-4" style="color: red; text-align: center; margin-top: 7px;">
+      Filter by Categorys
+      <select (change)="changeHandler($event)">
+        <option value="0">All</option>
+        <option *ngFor="let item of categories" [value]="item._id">
+          {{ item.name }}
+        </option>
+      </select>
+    </div>
   </div>
 
   <table class="table table-bordered">
@@ -47,10 +47,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let product of filteredProducts|paginate:{itemsPerPage:4,currentPage:p}; let i = index">
+      <tr
+        *ngFor="
+          let product of filteredProducts
+            | paginate : { itemsPerPage: 4, currentPage: p };
+          let i = index
+        "
+      >
         <td>{{ i + 1 }}</td>
         <td>{{ product.name }}</td>
-        <td><img class="img" [src]="product.image" style="width: 100px;" /></td>
+        <td><img class="img" [src]="product.image" style="width: 100px" /></td>
         <td>{{ product.price }}</td>
         <td>{{ product.description }}</td>
         <td>{{ product.color }}</td>
@@ -65,12 +71,9 @@
           <button class="btn btn-danger" (click)="removeHandler(product._id)">
             Remove
           </button>
-
         </td>
-
       </tr>
     </tbody>
   </table>
-  <pagination-controls (pageChange)="p= $event"></pagination-controls>
-
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
