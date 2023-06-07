@@ -13,7 +13,7 @@ export class ProductListAdminComponent {
   products: IProduct[] = [];
   categories: ICategory[] = [];
   filteredProducts: IProduct[] = [];
-  p:number=1;
+  p: number = 1;
   searchKeyword: string = '';
 
   constructor(
@@ -59,5 +59,18 @@ export class ProductListAdminComponent {
 
   onSearchKeywordChange() {
     this.filterProducts();
+  }
+  changeHandler(data: any) {
+    if (data.target.value != 0) {
+      this.categoryService.getCategoriesById(data.target.value).subscribe(data => {
+        this.filteredProducts = data.category.products
+      })
+    }
+    else {
+      this.productService.getProducts().subscribe((data) => {
+        this.products = data.data.docs;
+        this.filterProducts();
+      });
+    }
   }
 }
