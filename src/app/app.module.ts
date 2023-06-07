@@ -18,10 +18,9 @@ import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LayoutWebsiteComponent } from './layouts/layout-website/layout-website.component';
 import { CategoryAddComponent } from './pages/admin/category-add/category-add.component';
-import { ProductUpdateComponent} from './pages/admin/product-update/product-update.component';
+import { ProductUpdateComponent } from './pages/admin/product-update/product-update.component';
 import { CategoryListComponent } from './pages/admin/category-list/category-list.component';
 import { CategoryUpdateComponent } from './pages/admin/category-update/category-update.component';
-
 
 @NgModule({
   declarations: [
@@ -38,10 +37,9 @@ import { CategoryUpdateComponent } from './pages/admin/category-update/category-
     CategoryAddComponent,
     ProductAddComponent,
     ProductUpdateComponent,
-CategoryAddComponent,
-CategoryUpdateComponent,
-CategoryListComponent
-
+    CategoryAddComponent,
+    CategoryUpdateComponent,
+    CategoryListComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +48,7 @@ CategoryListComponent
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ],
 
   providers: [],
