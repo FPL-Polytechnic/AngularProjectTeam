@@ -60,4 +60,17 @@ export class ProductListAdminComponent {
   onSearchKeywordChange() {
     this.filterProducts();
   }
+  changeHandler(data: any) {
+    if (data.target.value != 0) {
+      this.categoryService.getCategoriesById(data.target.value).subscribe(data => {
+        this.filteredProducts = data.category.products
+      })
+    }
+    else {
+      this.productService.getProducts().subscribe((data) => {
+        this.products = data.data.docs;
+        this.filterProducts();
+      });
+    }
+  }
 }
