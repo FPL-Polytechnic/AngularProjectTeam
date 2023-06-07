@@ -2,55 +2,52 @@
   rel="stylesheet"
   href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 />
-<main>
-  <div *ngIf="product" class="container single-product" style="margin-top: 30px">
+<main
+  style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"
+>
+  <div
+    *ngIf="product"
+    class="container single-product"
+    style="margin-top: 30px"
+  >
     <div class="row">
       <div class="col-md-7 col-xs-12" style="width: 90%">
-        <img
-          [src]="product.image"
-          width="100%"
-          id="large_img"
-        />
+        <img [src]="product.image" width="100%" id="large_img" />
         <br /><br />
         <div class="row small-img-row">
           <div class="col-2 small-img-col">
-            <img
-            [src]="product.image"
-            width=" 100%"
-              class="small-img active"
-            />
+            <img [src]="product.image" width=" 100%" class="small-img active" />
           </div>
           <div class="col-2 small-img-col">
-            <img
-            [src]="product.image"
-            width=" 100%"
-              class="small-img active"
-            />
+            <img [src]="product.image" width=" 100%" class="small-img active" />
           </div>
         </div>
       </div>
 
       <div class="col-md-5 col-xs-12">
         <div class="single-product-details">
-          <h2>{{product.name}}</h2>
+          <h1 style="text-align: center">{{ product.name }}</h1>
           <br />
-         {{product.description}}
           <p>
-            <strong>Cấu hình </strong>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-            incidunt velit a, quaerat
+            <strong>Mô tả sản phẩm : </strong>
+            {{ product.description }}
           </p>
           <br />
           <p>
-            <strong>Giá :</strong>
-           {{product.price}}
+            <strong>Màu sắc : </strong>
+            {{ product.color }}
+          </p>
+          <br />
+          <p style="color: red">
+            <strong style="color: black">Giá :</strong>
+            {{ product.price }}
           </p>
           <br />
           <p>
             <span style="font-size: 14px">
               <strong>Lưu ý:</strong>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-              incidunt velit a, quaerat
+              Tất cả sản phẩm đều được bảo hành chính hãng và phân phối tại Việt
+              Nam
             </span>
           </p>
         </div>
@@ -67,20 +64,18 @@
         <a href="#">Xem thêm</a>
       </div>
     </div>
-    <div *ngFor="let product of productSimilar,index as i" class="row">
+    <div *ngFor="let product of productSimilar; index as i" class="row">
       <div class="col-md-3 col-6 pro-loop">
         <div class="product">
           <div class="product_img">
             <div class="figure">
-              <img style="width: 180px;height: 200px;"
-              [src]="product.image"
-              />
+              <img style="width: 180px; height: 200px" [src]="product.image" />
             </div>
           </div>
           <div class="product_detail">
-            <h3 class="product_detail-name">{{product.name}}</h3>
+            <h3 class="product_detail-name">{{ product.name }}</h3>
             <div class="product_detail-price">
-              <p>{{product.price}}</p>
+              <p>{{ product.price }}</p>
             </div>
           </div>
         </div>

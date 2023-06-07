@@ -13,7 +13,7 @@ export class ProductListAdminComponent {
   products: IProduct[] = [];
   categories: ICategory[] = [];
   filteredProducts: IProduct[] = [];
-  p:number=1;
+  p: number = 1;
   searchKeyword: string = '';
 
   constructor(

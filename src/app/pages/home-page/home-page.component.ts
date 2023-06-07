@@ -7,7 +7,7 @@ import { ProductService } from 'src/app/services/product.service';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+  styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent {
   products: IProduct[] = [];
@@ -27,7 +27,4 @@ export class HomePageComponent {
     const category = this.categories.find((item) => item._id === id);
     return category?.name;
   }
-  
-
-
 }
