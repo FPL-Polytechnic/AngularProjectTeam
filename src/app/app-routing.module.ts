@@ -13,6 +13,7 @@ import { CategoryAddComponent } from './pages/admin/category-add/category-add.co
 import { ProductUpdateComponent } from './pages/admin/product-update/product-update.component';
 import { CategoryListComponent } from './pages/admin/category-list/category-list.component';
 import { CategoryUpdateComponent } from './pages/admin/category-update/category-update.component';
+import { UserListComponent } from './pages/admin/user-list/user-list.component';
 
 
 const routes: Routes = [
@@ -38,7 +39,8 @@ const routes: Routes = [
       { path: 'products/:id/edit', component: ProductUpdateComponent },
       { path: 'category', component: CategoryListComponent },
       { path: 'category/add', component: CategoryAddComponent },
-      {path: 'category/:id/edit',component:CategoryUpdateComponent}
+      {path: 'category/:id/edit',component:CategoryUpdateComponent},
+      {path:'user',component:UserListComponent}
     ],
   },
 ];
