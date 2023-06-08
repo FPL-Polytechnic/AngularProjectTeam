@@ -30,8 +30,8 @@ export class LoginUserComponent {
         localStorage.setItem('accessToken', JSON.stringify(user))
         alert("Đăng nhập thành công")
         setTimeout(()=>{
-          this.router.navigateByUrl('/admin/products')
-        }, 2000)    
+          this.router.navigateByUrl('/')
+        }, 1000)    
     })
   }
 }
