@@ -21,6 +21,7 @@ import { CategoryAddComponent } from './pages/admin/category-add/category-add.co
 import { ProductUpdateComponent } from './pages/admin/product-update/product-update.component';
 import { CategoryListComponent } from './pages/admin/category-list/category-list.component';
 import { CategoryUpdateComponent } from './pages/admin/category-update/category-update.component';
+import { ShowvalidateComponent } from './showvalidate/showvalidate.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { CategoryUpdateComponent } from './pages/admin/category-update/category-
     CategoryAddComponent,
     CategoryUpdateComponent,
     CategoryListComponent,
+    ShowvalidateComponent,
   ],
   imports: [
     BrowserModule,

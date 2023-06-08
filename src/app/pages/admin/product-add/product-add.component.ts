@@ -15,10 +15,10 @@ export class ProductAddComponent {
   categories: ICategory[] = [];
   productForm: FormGroup = this.formBuilder.group({
     name: ['', [Validators.required, Validators.minLength(4)]],
-    price: [0],
-    image: [''],
+    price: [0,[Validators.required,Validators.min(1)]],
+    image: ['',[Validators.required]],
     description: ['', [Validators.required, Validators.minLength(4)]],
-    color: [''],
+    color: ['',[Validators.required]],
     categoryId: ['', [Validators.required, Validators.minLength(4)]],
   });
 

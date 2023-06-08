@@ -4,15 +4,17 @@
     <label for="name">Tên sản phẩm:</label>
     <input type="text" id="name" formControlName="name" class="form-control" />
   </div>
+  <app-showvalidate [field]="productForm.get('name')" key="Tên sản phẩm"></app-showvalidate>
   <div class="mp3">
     <label for="price">Giá:</label>
     <input
-      type="text"
+      type="number"
       id="price"
       formControlName="price"
       class="form-control"
     />
   </div>
+  <app-showvalidate [field]="productForm.get('price')" key="Giá sản phẩm"></app-showvalidate>
   <div class="mp3">
     <label for="description">Mô tả:</label>
     <input
@@ -22,6 +24,7 @@
       class="form-control"
     />
   </div>
+  <app-showvalidate [field]="productForm.get('description')" key="mô tả"></app-showvalidate>
   <div class="mp3">
     <label for="image">Image:</label>
     <input
@@ -31,6 +34,7 @@
       class="form-control"
     />
   </div>
+  <app-showvalidate [field]="productForm.get('image')" key="ảnh"></app-showvalidate>
   <div class="mp3">
     <label for="color">Màu sắc:</label>
     <input
@@ -40,6 +44,7 @@
       class="form-control"
     />
   </div>
+  <app-showvalidate [field]="productForm.get('color')" key="màu"></app-showvalidate>
   <div class="mp3">
     <label for="categoryId">Loại</label>
     <select class="form-control" formControlName="categoryId" id="categoryId">
