@@ -6,6 +6,26 @@
     class="form-control"
     placeholder="Tên danh mục"
   />
+  <div
+  class="error"
+  *ngIf="
+      productForm.get('name')?.hasError('required') &&
+      (productForm.get('name')?.touched ||
+          productForm.get('name')?.dirty)
+  "
+>
+  Name is Required
+</div>
+<div
+class="error"
+*ngIf="
+    productForm.get('name')?.hasError('minlength') &&
+    (productForm.get('name')?.touched ||
+        productForm.get('name')?.dirty)
+"
+>
+Name ít nhất 4 kí tự
+</div>
   <div class="btnadd">
     <button type="submit" [disabled]="!productForm.valid" class="btn btn-danger">
     Submit
