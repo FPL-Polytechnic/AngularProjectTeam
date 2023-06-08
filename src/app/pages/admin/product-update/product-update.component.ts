@@ -16,11 +16,11 @@ export class ProductUpdateComponent implements OnInit {
   products: IProduct[] = [];
   productForm = this.formBuilder.group({
     name: ['', [Validators.required, Validators.minLength(4)]],
-    price: [0],
-    image: [''],
+    price: [0, [Validators.required, Validators.min(1)]],
+    image: ['', [Validators.required]],
     description: ['', [Validators.required, Validators.minLength(4)]],
-    color: [''],
-    categoryId: [null, [Validators.required]],
+    color: ['', Validators.required],
+    categoryId: ['', [Validators.required, Validators.minLength(4)]],
   });
 
   productId: string | null = null;
@@ -41,8 +41,8 @@ export class ProductUpdateComponent implements OnInit {
     }
     this.categoryService.getCategories().subscribe((data) => {
       this.categories = data.data;
-    this.productService.getProducts().subscribe((data) => {
-      this.products = data.data.docs;
+      this.productService.getProducts().subscribe((data) => {
+        this.products = data.data.docs;
       });
     });
   }
