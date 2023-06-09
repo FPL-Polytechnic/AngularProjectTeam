@@ -14,10 +14,8 @@ export class LayoutWebsiteComponent {
     this.user = data;
   }
   logOut() {
-    console.log(1);
-    alert("đăng xuất thành công")
-    localStorage.removeItem('accessToken')
-    this.user = false
+    alert('Đăng xuất thành công ✅');
+    localStorage.removeItem('accessToken');
+    this.user = false;
   }
-
 }
