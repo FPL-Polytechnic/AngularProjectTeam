@@ -1,34 +1,19 @@
-<table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>STT</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Role</th>
-
-        <th>Thao tác</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of user
-      let i = index
-      ">
+<h2>Danh sách người dùng</h2>
+<table class="table table-bordered" style="text-align: center">
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of user; let i = index">
       <td>{{ i + 1 }}</td>
-        <td>{{user.name}}</td>
-        <td>{{user.email}}</td>
-        <td>{{user.role}}</td>
-        <td>
-          <a
-            class="btn btn-primary"
-            style="margin-right: 3px"
-       
-            >Edit</a
-          >
-          <button class="btn btn-danger">
-            Remove
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.role }}</td>
+    </tr>
+  </tbody>
+</table>
