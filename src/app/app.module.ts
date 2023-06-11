@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -23,6 +23,7 @@ import { CategoryListComponent } from './pages/admin/category-list/category-list
 import { CategoryUpdateComponent } from './pages/admin/category-update/category-update.component';
 import { ShowvalidateComponent } from './showvalidate/showvalidate.component';
 import { UserListComponent } from './pages/admin/user-list/user-list.component';
+import { AuthInterceptor } from './auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { UserListComponent } from './pages/admin/user-list/user-list.component';
     CategoryUpdateComponent,
     CategoryListComponent,
     ShowvalidateComponent,
-    UserListComponent
+    UserListComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +56,9 @@ import { UserListComponent } from './pages/admin/user-list/user-list.component';
     NgxPaginationModule,
   ],
 
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
