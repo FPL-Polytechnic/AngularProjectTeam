@@ -14,4 +14,7 @@ export class AuthService {
   login = (user: IUser): Observable<IUser> => {
     return this.http.post<IUser>('http://localhost:8080/api/signin', user)
   }
+  isAuthenticated(): any {
+    return JSON.parse(localStorage.getItem('accessToken') || '{}');
+  }
 }

@@ -15,6 +15,7 @@ import { CategoryListComponent } from './pages/admin/category-list/category-list
 import { CategoryUpdateComponent } from './pages/admin/category-update/category-update.component';
 import { UserListComponent } from './pages/admin/user-list/user-list.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
@@ -33,6 +34,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component: LayoutAdminComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },

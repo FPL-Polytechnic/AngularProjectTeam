@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -24,6 +24,7 @@ import { CategoryUpdateComponent } from './pages/admin/category-update/category-
 import { ShowvalidateComponent } from './showvalidate/showvalidate.component';
 import { UserListComponent } from './pages/admin/user-list/user-list.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { AuthInterceptor } from './auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,9 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
     NgxPaginationModule,
   ],
 
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
