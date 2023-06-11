@@ -43,7 +43,7 @@ import { UserListComponent } from './pages/admin/user-list/user-list.component';
     CategoryUpdateComponent,
     CategoryListComponent,
     ShowvalidateComponent,
-    UserListComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,

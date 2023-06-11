@@ -9,9 +9,16 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UserListComponent {
   user: IUser[] = [];
-  constructor(private productsUser: UserService) {
-    this.productsUser.getUsers().subscribe((data) => {
+  constructor(private userService: UserService) {
+    this.userService.getUsers().subscribe((data) => {
       this.user = data.data;
     });
+  }
+  removeHandler(id: any) {
+    if (confirm('Bạn có chắc chắn muốn xóa người dùng không?')) {
+      this.userService.deleteUser(id).subscribe(() => {
+        this.user = this.user.filter((user) => user._id !== id);
+      });
+    }
   }
 }
