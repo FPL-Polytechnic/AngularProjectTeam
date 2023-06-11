@@ -6,6 +6,7 @@
       <th>Name</th>
       <th>Email</th>
       <th>Role</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +15,12 @@
       <td>{{ user.name }}</td>
       <td>{{ user.email }}</td>
       <td>{{ user.role }}</td>
+      <td>
+        <a class="btn btn-primary" style="margin-right: 3px">Edit</a>
+        <button class="btn btn-danger" (click)="removeHandler(user._id)">
+          Remove
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>
