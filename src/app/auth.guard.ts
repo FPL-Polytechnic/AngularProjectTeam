@@ -24,6 +24,7 @@ export class AuthGuard implements CanActivate {
     | UrlTree {
     const userInfo = this.authService.isAuthenticated();
     if (userInfo?.user?.role !== 'admin') {
+      alert('Bạn không có quyền truy cập!');
       this.router.navigate(['/login']);
       return false;
     }
