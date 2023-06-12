@@ -16,6 +16,7 @@ import { CategoryUpdateComponent } from './pages/admin/category-update/category-
 import { UserListComponent } from './pages/admin/user-list/user-list.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { AuthGuard } from './auth.guard';
+import { UserEditComponent } from './pages/admin/user-edit/user-edit.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomePageComponent },
       { path: 'product/:id', component: ProductDetailComponent },
-      {path: 'search',component: SearchPageComponent},
+      { path: 'search', component: SearchPageComponent },
     ],
   },
   { path: 'register', component: RegisterUserComponent },
@@ -37,14 +38,15 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'user/:id/edit', component: UserEditComponent },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'products', component: ProductListAdminComponent },
       { path: 'products/add', component: ProductAddComponent },
       { path: 'products/:id/edit', component: ProductUpdateComponent },
       { path: 'category', component: CategoryListComponent },
       { path: 'category/add', component: CategoryAddComponent },
-      {path: 'category/:id/edit',component:CategoryUpdateComponent},
-      {path:'user',component:UserListComponent}
+      { path: 'category/:id/edit', component: CategoryUpdateComponent },
+      { path: 'user', component: UserListComponent }
     ],
   },
 ];
@@ -53,4 +55,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

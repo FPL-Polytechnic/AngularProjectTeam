@@ -25,6 +25,7 @@ import { ShowvalidateComponent } from './showvalidate/showvalidate.component';
 import { UserListComponent } from './pages/admin/user-list/user-list.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { AuthInterceptor } from './auth.interceptor';
+import { UserEditComponent } from './pages/admin/user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { AuthInterceptor } from './auth.interceptor';
     CategoryListComponent,
     ShowvalidateComponent,
     UserListComponent,
-    SearchPageComponent
+    SearchPageComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,

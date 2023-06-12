@@ -16,6 +16,10 @@ export class UserService {
       `http://localhost:8080/api/user/${id}`
    );
   }
-
-  
+  getUserById(id:any):Observable<any>{
+    return this.http.get<any>(`http://localhost:8080/api/user/${id}`)
+  }
+  updateUser(user:any):Observable<any>{
+    return this.http.patch<any>(`http://localhost:8080/api/user/${user._id}`,user)
+  }
 }
