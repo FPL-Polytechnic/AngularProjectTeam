@@ -1,0 +1,24 @@
+<h2 class="pb-2" >Update User</h2>
+<form (ngSubmit)="submitHandler()" [formGroup]="userForm">
+  <div class="mb-3">
+    <input
+    type="text"
+    class="form-control"
+    placeholder="Email"
+    formControlName="email"
+  />
+  </div>
+  <div class="mb-3">
+    <input
+    type="text"
+    class="form-control"
+    placeholder="Name"
+    formControlName="name"
+  />
+  </div>
+  <div class="btnedit">
+      <button type="submit"  class="btn btn-danger">
+    Submit
+  </button>
+  </div>
+</form>
