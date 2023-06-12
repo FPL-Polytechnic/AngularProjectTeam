@@ -14,6 +14,7 @@ import { ProductUpdateComponent } from './pages/admin/product-update/product-upd
 import { CategoryListComponent } from './pages/admin/category-list/category-list.component';
 import { CategoryUpdateComponent } from './pages/admin/category-update/category-update.component';
 import { UserListComponent } from './pages/admin/user-list/user-list.component';
+import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { AuthGuard } from './auth.guard';
 
 
@@ -24,6 +25,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomePageComponent },
       { path: 'product/:id', component: ProductDetailComponent },
+      {path: 'search',component: SearchPageComponent},
     ],
   },
   { path: 'register', component: RegisterUserComponent },

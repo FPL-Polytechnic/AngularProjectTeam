@@ -23,6 +23,7 @@ import { CategoryListComponent } from './pages/admin/category-list/category-list
 import { CategoryUpdateComponent } from './pages/admin/category-update/category-update.component';
 import { ShowvalidateComponent } from './showvalidate/showvalidate.component';
 import { UserListComponent } from './pages/admin/user-list/user-list.component';
+import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { AuthInterceptor } from './auth.interceptor';
 
 @NgModule({
@@ -45,6 +46,7 @@ import { AuthInterceptor } from './auth.interceptor';
     CategoryListComponent,
     ShowvalidateComponent,
     UserListComponent,
+    SearchPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,40 @@
+<div class="container sanphammoi">
+    <p>Tìm thấy <span style="font-style: italic; font-weight: bold"></span> kết quả cho từ khóa "
+      <span style="font-style: italic; font-weight: bold">{{q}} </span> "...
+    </p>
+    <div class="row">
+      <div class="col-md-3 col-6 pro-loop" *ngFor="let item of products">
+        <div class="product">
+          <div class="product_img">
+            <a routerLink="/product/{{ item._id }}">
+              <div class="figure">
+                <img [src]="item.image" width="270" height="270" />
+              </div>
+            </a>
+          </div>
+          <div class="product_detail">
+            <h3
+              class="product_detail-name"
+              style="
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+              "
+            >
+              <a
+                style="text-decoration: none"
+                routerLink="/books/{{ item._id }}"
+                >{{ item.name }}</a
+              >
+            </h3>
+            <div class="product_detail-price" style="text-align: center">
+              <p class="text-danger">
+                <del class="text-muted">{{ item.price | currency : "VND" }}</del>
+                {{ item.price | currency : "VND" }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
